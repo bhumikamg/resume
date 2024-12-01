@@ -1,0 +1,361 @@
+/* Global Styles */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Link Styling */
+a {
+  color: #2c05dd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: blanchedalmond;
+}
+
+/* Header Styles for Home */
+.home {
+  background-image: url(./OIP.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: rgb(16, 15, 15);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Wrapper for content */
+.content-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: black;
+  text-align: center;
+}
+
+/* Profile Box Styles */
+.profile-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-box h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.profile-box .role {
+  text-align: center;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.profile-box p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.profile-box ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.profile-box ul li {
+  font-size: 1em;
+  color: #333;
+}
+
+.profile-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile-box a:hover {
+  text-decoration: underline;
+}
+
+/* Resume Section Styling */
+.resume header::before {
+  content: "";
+  background: url(./bg-home-office-city.jpg);
+  background-size: cover;
+  height: 375px;
+}
+
+.resume-section {
+  margin-left: 50px; /* Adjust the left margin as desired */
+  margin-right: auto; /* Automatically adjust the right margin to balance the left margin */
+  padding: 50px 20px;
+  width: 100%;
+  max-width: 900px; /* Maximum width to avoid stretching on large screens */
+  box-sizing: border-box;
+}
+
+.resume-section h2 {
+  border-bottom: 2px dashed #d3d4d6;
+  padding-bottom: 10px;
+  font-size: 1.6em;
+  color: #333;
+}
+
+/* Project Section */
+.project-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the items horizontally */
+  align-items: flex-start; /* Align items to the start vertically */
+  margin: 0 auto; /* Ensure the project-items container is centered */
+  max-width: 1000px; /* Optional: limit the width of the container */
+}
+
+.project {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 20px; /* Adds margin around each project */
+}
+
+.project h3 {
+  font-size: 1.4em;
+  margin-top: 10px;
+  color: #333;
+}
+
+.project p {
+  font-size: 1em;
+  color: #555;
+}
+
+.project-items img {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-items img:hover {
+  transform: scale(1.05);
+}
+
+/* Download Link */
+.download-link {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* Button Styling */
+.btn {
+  background: #aea1c8;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #9e85a1;
+}
+
+/* Footer Styles */
+.footer {
+  background: #333;
+  color: rgb(216, 94, 94);
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+ul.social, ul.tags {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+ul.social li, ul.tags li {
+  display: inline-block;
+}
+
+ul.social li a, ul.tags li a {
+  color: srgb(14, 12, 12);
+  font-size: 1.2em;
+}
+
+ul.social li a img, ul.tags li a img {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s ease;
+}
+
+ul.social li a:hover img, ul.tags li a:hover img {
+  opacity: 0.7;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+  .content-wrapper {
+    max-width: 750px;
+  }
+
+  .profile-box {
+    padding: 20px;
+  }
+
+  .profile-box h2 {
+    font-size: 1.8em;
+  }
+
+  .resume-section h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .content-wrapper {
+    max-width: 600px;
+  }
+
+  .profile-box {
+    padding: 15px;
+  }
+
+  .profile-box h2 {
+    font-size: 1.6em;
+  }
+
+  .project-items {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .project h3 {
+    font-size: 1.3em;
+  }
+
+  .project p {
+    font-size: 1em;
+  }
+
+  .footer {
+    padding: 20px 0;
+  }
+
+  .footer p {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    max-width: 500px;
+  }
+
+  .profile-box {
+    padding: 12px;
+  }
+
+  .profile-box h2 {
+    font-size: 1.5em;
+  }
+
+  .project {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project h3 {
+    font-size: 1.4em;
+  }
+
+  .footer {
+    padding: 15px 0;
+  }
+
+  ul.social, ul.tags {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-wrapper {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .profile-box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .profile-box h2 {
+    font-size: 1.4em;
+  }
+
+  .footer {
+    padding: 10px;
+    font-size: 0.8em;
+  }
+
+  ul.social li a img, ul.tags li a img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .project h3 {
+    font-size: 1.2em;
+  }
+
+  .project p {
+    font-size: 0.9em;
+  }
+}
